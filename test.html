@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script>
+function setImageVisible(id, visible) {
+    var img = document.getElementById(id);
+    img.style.visibility = (visible ? 'visible' : 'hidden');
+}
+
+function setImageVisible1(id, visible) {
+    var taggle= document.getElementById("myImageId1").style.visibility;
+    if(taggle == "hidden") {
+        document.getElementById("myImageId1").style.visibility = 'visible';
+    } else if (taggle == "visible") {
+        document.getElementById("myImageId1").style.visibility = 'hidden';
+    }
+}
+
+</script>
+<body>
+
+<img id="myImageId" src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+<a href="javascript:setImageVisible('myImageId', true)">show image</a>
+<a href="javascript:setImageVisible('myImageId', false)">hide image</a>
+
+<img id="myImageId1" src="html5.gif" alt="HTML5 Icon" style="visibility: visible; width:128px;height:128px;">
+<a href="javascript:setImageVisible1('myImageId1', false)">change image</a>
+
+</body>
+</html>

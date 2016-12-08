@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script>
+function setImageVisible(id, visible) {
+    var img = document.getElementById(id);
+    img.style.visibility = (visible ? 'visible' : 'hidden');
+}
+
+function setImageVisible1(id, visible) {
+    var taggle= document.getElementById("myImageId1").style.visibility;
+    if(taggle == "hidden") {
+        document.getElementById("myImageId1").style.visibility = 'visible';
+    } else if (taggle == "visible") {
+        document.getElementById("myImageId1").style.visibility = 'hidden';
+    }
+}
+
+function setImageVisible2(id, visible) {
+	console.log('allne start');
+    var taggle= document.getElementById("a123").style.display;
+    if(taggle == "none") {
+        document.getElementById("a123").style.display = 'inline';
+        document.getElementById("a456").style.display = 'none';
+    } else if (taggle == "inline") {
+        document.getElementById("a123").style.display = 'none';
+        document.getElementById("a456").style.display = 'inline';
+    }
+}
+</script>
+<body>
+
+<img id="myImageId" src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+<a href="javascript:setImageVisible('myImageId', true)">show image</a>
+<a href="javascript:setImageVisible('myImageId', false)">hide image</a>
+
+<img id="myImageId1" src="html5.gif" alt="HTML5 Icon" style="visibility: visible; width:128px;height:128px;">
+<a href="javascript:setImageVisible1('myImageId1', false)">change image</a>
+
+<a href="javascript:setImageVisible2('myImageId', false)">
+<img id="a123" src="plus.png" alt="HTML5 Icon" style="display:inline; width:128px;height:128px;">
+<img id="a456" src="negative.png" alt="HTML5 Icon" style="display:none; width:128px;height:128px;">
+</a>
+</body>
+</html>
